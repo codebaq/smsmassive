@@ -1,0 +1,87 @@
+.content-app {
+    
+}
+
+.content-app .item-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.CodigoQr {
+    text-align: center;
+    color: white;
+    font-family: Arial,;
+}
+
+.CodigoQr a:link, a:visited,  a:hover, a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.AreaMsj{
+    width: 90%;
+    height: 90vh;    
+    position: none;
+    top : none;
+    left: none;
+    color : white
+}
+
+.text-msj{
+    width: 80%;
+    float: left;
+    padding-left: 2%;
+}
+
+.text-msj textarea {
+    width: 80%;
+    height: 80vh;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.fab-container{
+    position: fixed;
+    cursor: pointer;
+    left: 90%;
+    top: 80%;
+}
+
+.fab-container button {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: gray;
+    border: none;
+    border: 1px solid white;
+}
+
+.fab-container button:hover{
+    cursor: pointer;
+    background-color: #74e757;
+}
+
+.fab-container button i {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 100%;
+    color:white;
+}
+
+.container-list-phone{
+    float: left;
+    height: 80vh; 
+}
+
+.container-list-phone button {
+    margin-left: 5px;
+}
+
+.list-phone{
+    margin-top: 20px;    
+}
+

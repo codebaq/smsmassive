@@ -35,9 +35,9 @@ export class SmsService {
      })
   }
 
-  SendSms(phone : any){
+  SendSms(phone : any, mensaje : any){
     return new Promise ((resolve,rejects)=> {
-      this.http.get(this.url + 'sendsms', {params : { 'tel': phone}, headers : httpOptions.headers } ).subscribe(res => {
+      this.http.get(this.url + 'sendsms', {params : { 'tel': phone, 'sms' : mensaje}, headers : httpOptions.headers } ).subscribe(res => {
         return resolve( res)
        })
      })

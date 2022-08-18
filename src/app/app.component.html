@@ -1,19 +1,42 @@
-<div class="CodigoQr" *ngIf="Login == false">
-  <img [src]="QrImg">
-</div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div class="content-app">
 
-<div *ngIf="Login == true">
-  <textarea></textarea>
-  <button (click)="sendsms()">enviar</button>
-  <div>
+  <div class="lds-ring item-center" *ngIf="loading == true"><div></div><div></div><div></div><div></div></div>
+
+  <div class="CodigoQr item-center" *ngIf="ShowQr == true">
+    <img [src]="QrImg">
+    <p> Ingresa a la app <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.messaging&hl=es&gl=US" style="text-decoration: none;"> <b>MENSAJES</b> </a>  de google desde tu celular y escanea este codigo</p>
+  </div>
+
+  <div class="AreaMsj" *ngIf="Login == true">
+    <div class="text-msj">
+      <p>Escribe tu mensaje</p>
+      <textarea [(ngModel)]="Mensaje" placeholder="ingresa tu mensaje"></textarea>      
+      
+    </div>
+   
+    <div class="container-list-phone">
+      <p>Ingesa un numero de telefono</p>
       <input type="text" [(ngModel)]="Telefono">
       <button (click)="addphone()">Añadir</button>
+
+      <div class="list-phone">
+        <ul>
+          <li *ngFor="let tel of ListTelefonos">{{tel}}</li>
+        </ul>
+      </div>
+
+    </div>
+
+   
   </div>
-  <div>
-    <ul>
-      <li *ngFor="let tel of ListTelefonos">{{tel}}</li>
-    </ul>
+
+  <div class="fab-container" *ngIf="Login == true">
+    <button (click)="sendsms()"><i class="material-icons" style="font-size:36px">send</i></button>
   </div>
+
 </div>
+
+
 
 <router-outlet></router-outlet>
