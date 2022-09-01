@@ -8,8 +8,10 @@ app.use(cors({
 
 app.use(express.static(path.join(__dirname, 'assets')))
 
+const bd = require('./backend/bd')
 const sms = require('./backend/sms')
 
+app.get('/createbd', bd.CreateBd)
 app.get('/getqr', sms.GetQr)
 app.get('/listenurl', sms.VerificUrl)
 app.get('/sendsms', sms.SendSms)

@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <div class="content-app">
 
+  <button (click)="createbd()">createbd</button>
+
   <div class="lds-ring item-center" *ngIf="loading == true"><div></div><div></div><div></div><div></div></div>
 
   <div class="CodigoQr item-center" *ngIf="ShowQr == true">
@@ -17,12 +19,15 @@
    
     <div class="container-list-phone">
       <p>Ingesa un numero de telefono</p>
-      <input type="text" [(ngModel)]="Telefono">
-      <button (click)="addphone()">Añadir</button>
+      <input type="number" [(ngModel)]="Telefono">
+      <button class="btn-transparent" (click)="addphone()"><i class="material-icons">add</i></button>
 
+      <p>Ingresa varios numeros telefonos</p>
+      <textarea [(ngModel)]="MultiTelefono"></textarea> 
+      <button class="btn-transparent" (click)="addmultiphone()"><i class="material-icons">supervisor_account</i></button>
       <div class="list-phone">
         <ul>
-          <li *ngFor="let tel of ListTelefonos">{{tel}}</li>
+          <li *ngFor="let tel of ListTelefonos" style="list-style-type: none;"><i class="material-icons">stay_current_portrait</i> {{tel}}</li>
         </ul>
       </div>
 

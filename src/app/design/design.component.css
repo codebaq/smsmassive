@@ -1,0 +1,27 @@
+.sidebar {
+    height: 100%;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    border: 1px solid lightblue;
+    padding-top: 40px;
+}
+
+.sidebar div {
+    padding: 8px;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+}
+
+.item-principal{
+    background-color: lightblue;
+    color: white;
+    border-top-left-radius:  10%;
+    border-bottom-left-radius: 10%;
+}
+
+.item-principal span{    
+   
+}
